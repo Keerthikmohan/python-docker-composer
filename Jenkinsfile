@@ -12,18 +12,11 @@ pipeline {
 
              }
         }
-    stage('build')
+    stage('build and deploy')
         {
         steps{
 
-                sh ''' docker build -t myapp:latest . '''
-             }
-        }
-    stage('deploy')
-        {
-        steps{
-
-    sh ''' docker run -itd --name myflaskapp -p 80:5000 myapp:latest '''
+    sh ''' docker-compose -d up '''
              }
         }
          
