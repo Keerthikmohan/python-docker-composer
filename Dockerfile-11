@@ -1,0 +1,13 @@
+FROM alpine
+
+RUN mkdir /pythoon-check
+
+COPY . /pythoon-check
+
+WORKDIR /pythoon-check
+
+Run apk update && apk add python3 --no-cache && apk add --update py-pip && pip install -r requirment.txt
+
+EXPOSE 5000
+
+CMD ["python3", "app.py"]
