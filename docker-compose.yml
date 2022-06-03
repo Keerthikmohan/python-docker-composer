@@ -5,5 +5,5 @@ services:
      build: .
      ports:
       - 81:5000
-  radis: 
+  redis: 
      image: redis
