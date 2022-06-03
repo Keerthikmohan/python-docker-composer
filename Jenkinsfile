@@ -8,7 +8,7 @@ pipeline {
         {
         steps{
 
-            git changelog: false, credentialsId: 'fd72c8d1-677e-48b0-8228-833cd397c430', poll: false, url: 'https://github.com/Keerthikmohan/python-dcoker.git'
+            git credentialsId: 'fd72c8d1-677e-48b0-8228-833cd397c430', url: 'https://github.com/Keerthikmohan/python-docker-composer.git'
 
              }
         }
