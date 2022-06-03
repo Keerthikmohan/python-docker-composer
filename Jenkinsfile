@@ -23,7 +23,7 @@ pipeline {
         {
         steps{
 
-    sh ''' docker run -itd --name myflaskapp -p 80:80 myapp:latest '''
+    sh ''' docker run -itd --name myflaskapp -p 80:5000 myapp:latest '''
              }
         }
          
